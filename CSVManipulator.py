@@ -1,9 +1,10 @@
 import csv
+import time
 
 def addPrice(stockName, stockValue):
     outputFile = open("output.csv", 'a', newline='')
     outputWriter = csv.writer(outputFile)
-    outputWriter.writerow([stockName, stockValue])
+    outputWriter.writerow([stockName, stockValue, time.ctime()])
     outputFile.close()
 
 def printPrices():

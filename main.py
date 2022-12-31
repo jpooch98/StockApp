@@ -1,4 +1,4 @@
-import find, window, spread, price
+import find, window, CSVManipulator, price
 
 # Gets stock price from Google
 DOW_price = price.getDowPrice()
@@ -18,7 +18,7 @@ DOW_price = find.regex(DOW_price)
 window.show(SP_price, DOW_price)
 
 # A function that puts the values in a csv and prints the values to the terminal
-spread.addPrice("S&P", SP_price)
-spread.addPrice("DOW", DOW_price)
+CSVManipulator.addPrice("S&P", SP_price)
+CSVManipulator.addPrice("DOW", DOW_price)
 
-spread.printPrices()
+CSVManipulator.printPrices()
